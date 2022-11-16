@@ -2,13 +2,12 @@ package my.study.mybatis.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import my.study.mybatis.dvo.PtntItemRcrdDVO;
 import my.study.mybatis.entity.Mecfsirmt;
 
-@Mapper
 public interface MecfsirmtDAO {
 
 	@Select("""
@@ -17,6 +16,8 @@ public interface MecfsirmtDAO {
 			  from mecfsirmt a
 			 where a.cnos_rcrd_mstr_no = #{cnosRcrdMstrNo}
 			""")
-	public Mecfsirmt getMecfsirmt(@Param("cnosRcrdMstrNo") Long cnosRcrdMstrNo);
+	Mecfsirmt getMecfsirmt(@Param("cnosRcrdMstrNo") Long cnosRcrdMstrNo);
+
+	List<PtntItemRcrdDVO> getMecfsirmtList(@Param("ptntItemRcrd") PtntItemRcrdDVO ptntItemRcrd);
 
 }
