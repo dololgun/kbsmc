@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import my.study.mybatis.dvo.PtntItemRcrdDVO;
+import my.study.mybatis.dvo.PtntItemRcrdRecord;
 import my.study.mybatis.entity.Mecfsirmt;
 
 public interface MecfsirmtDAO {
@@ -19,5 +20,7 @@ public interface MecfsirmtDAO {
 	Mecfsirmt getMecfsirmt(@Param("cnosRcrdMstrNo") Long cnosRcrdMstrNo);
 
 	List<PtntItemRcrdDVO> getMecfsirmtList(@Param("ptntItemRcrd") PtntItemRcrdDVO ptntItemRcrd);
+
+	List<PtntItemRcrdRecord> getMecfsirmtList1(@Param("ptntItemRcrd") PtntItemRcrdRecord ptntItemRcrd);
 
 }

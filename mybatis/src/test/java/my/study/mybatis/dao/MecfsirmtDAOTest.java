@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import lombok.extern.slf4j.Slf4j;
 import my.study.mybatis.dvo.PtntItemRcrdDVO;
+import my.study.mybatis.dvo.PtntItemRcrdRecord;
 
 @SpringBootTest
 @Slf4j
@@ -35,6 +36,17 @@ public class MecfsirmtDAOTest {
 		ptntItemRcrd.setCnosRcrdNo(6045L);
 
 		var ptntItemRcrdList = mecfsirmtDAO.getMecfsirmtList(ptntItemRcrd);
+
+		ptntItemRcrdList.forEach(it -> log.debug("it={}", it));
+
+	}
+
+	@Test
+	public void getMecfsirmtList1() {
+
+		var ptntItemRcrd = new PtntItemRcrdRecord(6045L, null, null);
+
+		var ptntItemRcrdList = mecfsirmtDAO.getMecfsirmtList1(ptntItemRcrd);
 
 		ptntItemRcrdList.forEach(it -> log.debug("it={}", it));
 

@@ -1,4 +1,4 @@
-package my.study.mybatis.svc;
+package my.study.mybatis.svc.impl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import my.study.mybatis.dao.MecfsirmtDAO;
 import my.study.mybatis.dvo.PtntItemRcrdDVO;
+import my.study.mybatis.svc.PtntItemRcrdSvc;
 
 @Service
 public class PtntItemRcrdSvcImpl implements PtntItemRcrdSvc {

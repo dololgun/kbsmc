@@ -10,5 +10,13 @@
           from mecfsirmt a
          where a.cnos_rcrd_no = #{ptntItemRcrd.cnosRcrdNo}
     </select>
+    
+    <select id="getMecfsirmtList1" parameterType="PtntItemRcrdRecord" resultType="PtntItemRcrdRecord">
+        select a.cnos_rcrd_mstr_no
+             , a.cnos_rcrd_no
+             , a.cnos_item_rcrd_vl
+          from mecfsirmt a
+         where a.cnos_rcrd_no = #{ptntItemRcrd.cnosRcrdNo}
+    </select>
 
 </mapper>
